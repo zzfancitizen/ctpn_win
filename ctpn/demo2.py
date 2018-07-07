@@ -75,6 +75,7 @@ def ctpn(sess, net, image_name):
     boxes, new_scores = boxes[keep_inds], new_scores[keep_inds]
 
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    plt.figure(figsize=(10, 14))
 
     for key, box in enumerate(boxes):
         img_inside = img.copy()
